@@ -10,14 +10,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t cyclewebpage:1 . -f html/Dockerfile'
+                    sh 'docker build -t cyclewebpage:2 . -f html/Dockerfile'
                 }
             }
         }
         stage('Create Container') {
             steps {
                 script {
-                    sh 'docker run -itd --name cycleCont1 -p 9091:80 cyclewebpage:1'
+                    sh 'docker run -itd --name cycleCont2 -p 9092:80 cyclewebpage:1'
                 }
             }
         }

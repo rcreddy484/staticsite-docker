@@ -17,7 +17,7 @@ pipeline {
         stage('Create Container') {
             steps {
                 script {
-                    sh 'docker run -itd --name cycleCont2 -p 9093:80 cyclewebpage:3'
+                    sh 'docker run -itd --name cycleCont3 -p 9093:80 cyclewebpage:3'
                 }
             }
         }

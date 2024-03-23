@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t cyclewebpage . -f  -f /staticsite-docker/html/Dockerfile'
+                    sh 'docker build -t cyclewebpage . -f /staticsite-docker/html/Dockerfile'
                 }
             }
         }
